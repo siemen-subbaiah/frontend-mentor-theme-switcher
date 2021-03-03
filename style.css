@@ -1,0 +1,226 @@
+:root {
+  --prim-clr: hsl(0, 0%, 100%);
+  --BG-Pattern: hsl(225, 100%, 98%);
+  --Card-BG: hsl(227, 47%, 96%);
+  --text-clr: hsl(228, 12%, 44%);
+  --text-clr2: hsl(230, 17%, 14%);
+  --Toggle: hsl(230, 22%, 74%);
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --YouTube: hsl(348, 97%, 39%);
+}
+
+.dark {
+  --prim-clr: hsl(230, 17%, 14%);
+  --BG-Pattern: hsl(232, 19%, 15%);
+  --Card-BG: hsl(228, 28%, 20%);
+  --text-clr: hsl(228, 34%, 66%);
+  --text-clr2: hsl(0, 0%, 100%);
+  --Toggle: linear-gradient(to right, hsl(210deg 78% 56%), hsl(146deg 68% 55%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--prim-clr);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease-in;
+  color: var(--text-clr2);
+  overflow: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#hi {
+  margin: 1rem 0;
+}
+
+.flex {
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+#sp1 {
+  margin: 0.3rem 0;
+}
+
+.green {
+  color: var(--Lime-Green);
+}
+
+.red {
+  color: var(--Bright-Red);
+}
+
+.sp {
+  color: var(--text-clr);
+}
+
+.fb {
+  color: var(--Facebook);
+}
+.tw {
+  color: var(--Twitter);
+}
+.yt {
+  color: var(--YouTube);
+}
+.ig {
+  color: var(--Instagram);
+}
+
+#fb-card {
+  border-top: 4px solid hsl(208, 92%, 53%);
+}
+
+#tw-card {
+  border-top: 4px solid hsl(208, 92%, 53%);
+}
+#yt-card {
+  border-top: 4px solid hsl(348, 97%, 39%);
+}
+#ig-card {
+  border-top: 4px solid #fdc468;
+}
+
+.heading h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.move {
+  position: relative;
+  top: -2.4rem;
+  left: 61rem;
+  overflow: hidden;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.flex2 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+#s-img {
+  margin: 0 0.5rem;
+}
+
+.tt {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.card {
+  width: 100%;
+  margin: 1rem auto;
+  background-color: var(--Card-BG);
+  border-radius: 5px;
+  position: static;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 3rem;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.user-name {
+  font-size: 0.9rem;
+}
+
+.overview {
+  margin: 2rem 0;
+}
+
+.card2 {
+  background-color: var(--Card-BG);
+  margin-top: 1rem;
+  border-radius: 5px;
+  height: 8.5rem;
+}
+
+.flex3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.move2 {
+  display: none;
+}
+
+.switch-btn {
+  position: absolute;
+  top: 3.2rem;
+  right: 20rem;
+  padding: 0.5rem;
+  width: 3.5rem;
+  color: cornflowerblue;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  height: 1.8rem;
+  transition: all 0.3s linear;
+  background: var(--Toggle);
+}
+
+.switch {
+  position: absolute;
+  width: 50%;
+  height: 1.6rem;
+  top: 0.1rem;
+  right: 0.15rem;
+  background: var(--Card-BG);
+  border-radius: 20px;
+  margin: 0;
+  display: block;
+  transition: all 0.3s linear;
+}
+
+.slide .switch {
+  right: 47%;
+}
+
+@media (max-width: 600px) {
+  .grid4 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .switch-btn {
+    top: 7rem;
+    right: 2.5rem;
+  }
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+  .move2 {
+    display: initial;
+    position: relative;
+    top: 0.258rem;
+  }
+}
